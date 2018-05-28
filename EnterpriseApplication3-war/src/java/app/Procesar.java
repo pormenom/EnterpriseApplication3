@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -56,12 +56,12 @@ public class Procesar extends HttpServlet {
             out.println("Usuario: <input type='text' name='txtUser' /></br>");
             else
             out.println("Usuario: <input type='text' value="+user+" name='txtUser' /></br>");
-            
+            out.println("Texto: </br> <textarea name='txtTexto'>");
             if(texto == null || !user.equals(session.mostrarU()))
-            out.println("Texto: </br> <textarea name='txtTexto'>"+session.Mostrar()+"</textarea></br>");
+            out.println(session.Mostrar());
             else 
-            out.println("Texto: </br> <textarea name='txtTexto'>"+texto+"</textarea></br>");
-            
+            out.println(texto);
+            out.println("</textarea></br>");
             
             
             
